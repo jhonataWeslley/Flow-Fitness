@@ -1,0 +1,639 @@
+/* ===== A MÁGICA DA ADAPTAÇÃO ESTÁ AQUI (VERSÃO UNIVERSITÁRIOS) ===== */
+:root {
+    /* Cores - Mais vibrantes e energéticas */
+    --primary-color: #0ea5e9; /* Azul Céu - mais elétrico e jovem */
+    --secondary-color: #f97316; /* Laranja Intenso - para ação e energia */
+    --dark-color: #0f172a; /* Azul-noite - um preto mais tecnológico */
+    --light-color: #f8fafc; /* Cinza gelo - super limpo */
+    --white-color: #ffffff;
+    --text-color: #334155;
+    --border-radius: 8px;
+
+    /* Tipografia (Manter Inter, é perfeita para UI de tecnologia) */
+    --font-family: 'Inter', sans-serif;
+    --font-size-base: 16px;
+    --font-size-h1: 3.052rem;
+    --font-size-h2: 2.441rem;
+    --font-size-h3: 1.953rem;
+    
+    /* Layout */
+    --container-width: 1120px;
+    --transition-speed: 0.3s ease;
+}
+
+/* ===== ESTILOS GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--dark-color);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); text-align: center; margin-bottom: 2rem; }
+h3 { font-size: var(--font-size-h3); }
+p { margin-bottom: 1rem; }
+a { text-decoration: none; color: var(--primary-color); }
+
+/* ===== COMPONENTES REUTILIZÁVEIS ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.card {
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+
+/* ===== SEÇÕES ESPECÍFICAS ===== */
+/* Header */
+.header {
+    background: var(--white-color);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+.logo svg { margin-right: 0.5rem; }
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.header nav a {
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+.header nav a:hover { color: var(--primary-color); }
+
+/* Hero Section */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1740&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white-color);
+}
+.hero-content {
+    max-width: 800px;
+}
+.hero h1 {
+    color: var(--white-color);
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 0;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Exercise Showcase */
+.exercise-showcase {
+    padding: 5rem 0;
+    background: var(--white-color);
+}
+.exercise-showcase .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.exercise-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* Plans & CTA */
+.plans, .cta {
+    padding: 5rem 0;
+    text-align: center;
+}
+.cta {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+.cta h2 {
+    color: var(--white-color);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+.footer-links {
+    margin-bottom: 1rem;
+}
+.footer-links a {
+    color: var(--light-color);
+    margin: 0 1rem;
+    transition: color var(--transition-speed);
+}
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Animações de Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 { font-size: 2.441rem; }
+    h2 { font-size: 1.953rem; }
+    h3 { font-size: 1.563rem; }
+    
+    .header nav { display: none; } /* Simplificação para mobile */
+    .exercise-showcase .container {
+        grid-template-columns: 1fr;
+    }
+}/* ===== ESTILOS PARA A SEÇÃO DE PLANILHAS ===== */
+.plans {
+    background-color: var(--white-color); /* Um fundo diferente para destacar a seção */
+}
+
+.plans .container p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.plan-card {
+    border: 1px solid #e5e7eb;
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.07);
+}
+
+.plan-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.plan-header h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.plan-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 999px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    opacity: 0.8;
+}
+
+.plan-tag.tag-secondary {
+    background-color: var(--secondary-color);
+}
+
+.plan-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Faz esta área crescer para preencher o espaço */
+}
+
+.plan-body p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.plan-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.plan-body li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.plan-body .day {
+    font-weight: 600;
+    color: var(--dark-color);
+    display: inline-block;
+    width: 35px; /* Alinha os dias da semana */
+}
+
+.plan-footer {
+    padding: 1.5rem;
+    background-color: var(--white-color);
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.btn-plan {
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+.btn-plan:hover {
+    color: var(--secondary-color);
+}/* ===== ESTILOS PARA A NOVA SEÇÃO DE MÉTRICAS ===== */
+.metrics-section {
+    padding: 5rem 0;
+}
+.metrics-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+.metrics-image img {
+    max-height: 350px; /* Define uma altura máxima. Ajuste este valor se precisar */
+    width: 100%; /* Garante que ela ocupe a largura disponível, até a max-height */
+    aspect-ratio: 1 / 1; /* Mantém a proporção quadrada */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: var(--border-radius); /* Mantém o arredondamento dos cantos */
+    display: block; /* Para permitir o margin auto funcionar corretamente */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+.metrics-integrations {
+    margin-top: 2rem;
+}
+.metrics-integrations p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.integration-icons img {
+    height: 32px; /* Tamanho padrão para os logos */
+    margin-right: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Ajuste para mobile na seção de métricas */
+@media (max-width: 768px) {
+    .metrics-section .container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilo para arredondar os logos de integração */
+/* Estilo para arredondar AS BORDAS dos logos de integração */
+.integration-icons img {
+    border-radius: 8px; /* Aplica um arredondamento suave de 8 pixels nos cantos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Mantém a sombra suave para dar profundidade */
+}
+/* ===== ESTILOS PARA A PÁGINA DE CADASTRO (signup.html) ===== */
+
+/* Hero da página de cadastro */
+.signup-hero {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 70vh; /* Altura mínima para ocupar mais espaço */
+    text-align: center;
+}
+
+.signup-hero .container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.signup-content {
+    flex: 1 1 500px; /* Cresce e encolhe, base de 500px */
+    max-width: 600px;
+    text-align: left;
+}
+
+.signup-content h2 {
+    color: var(--white-color);
+    font-size: var(--font-size-h2);
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.signup-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.signup-form-card {
+    flex: 1 1 350px; /* Cresce e encolhe, base de 350px para o formulário */
+    max-width: 450px;
+    background-color: var(--white-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.signup-form-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+}
+
+.signup-form .form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.signup-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    color: var(--dark-color);
+    transition: border-color var(--transition-speed);
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form input[type="email"]:focus,
+.signup-form input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2); /* Sombra de foco com cor primária */
+}
+
+.signup-form .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.signup-form .checkbox-group input[type="checkbox"] {
+    margin-right: 0.8rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.signup-form .checkbox-group label {
+    margin-bottom: 0; /* Remover margin-bottom padrão */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.signup-form .checkbox-group a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Seção de Depoimentos */
+.testimonials {
+    padding: 5rem 0;
+    background-color: var(--light-color);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: var(--white-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem auto;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 5px rgba(14, 165, 233, 0.2);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.testimonial-card h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Seção de Propostas de Valor (Value Propositions) */
+.value-propositions {
+    padding: 5rem 0;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-item {
+    text-align: center;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+.value-icon {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+}
+
+.value-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.value-item p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+/* Responsividade para a página de cadastro */
+@media (max-width: 992px) {
+    .signup-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .signup-content h2, .signup-content p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-hero {
+        padding: 3rem 0;
+    }
+    .signup-content h2 {
+        font-size: 2rem;
+    }
+    .signup-form-card {
+        padding: 2rem 1.5rem;
+    }
+    .testimonial-grid, .value-grid {
+        grid-template-columns: 1fr;
+    }
+}

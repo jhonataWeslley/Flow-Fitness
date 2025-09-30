@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Fitness: Crie sua Conta Grátis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="var(--primary-color)"/>
+                    <path d="M15 7H9v2h4v2h-2v2h2v2H9v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z" fill="white"/>
+                </svg>
+                <span>FLOW FITNESS</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#features">Serviços</a></li>
+                    <li><a href="index.html#metrics">Métricas</a></li>
+                    <li><a href="index.html#plans">Planos</a></li>
+                    <li><a href="index.html#exercises">Exercícios</a></li>
+                </ul>
+            </nav>
+            <a href="signup.html" class="btn btn-primary">Crie sua Conta</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="signup-hero">
+            <div class="container">
+                <div class="signup-content reveal">
+                    <h2>Crie sua Conta Grátis e Comece a Transformar seu Treino</h2>
+                    <p>Milhares de universitários já estão elevando sua performance com o Flow Fitness. Junte-se a eles e experimente o poder de treinar com dados e estratégia.</p>
+                </div>
+                <div class="signup-form-card reveal">
+                    <h3>Cadastro Rápido</h3>
+                    <form action="#" method="POST" class="signup-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail Universitário</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@universidade.edu.br" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha</label>
+                            <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirme a Senha</label>
+                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" required>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary btn-full">Criar Conta Flow Fitness</button>
+                    </form>
+                    <p class="login-link">Já tem uma conta? <a href="#">Faça Login</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="reveal">O que nossos atletas dizem</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card reveal">
+                        <img src="assets/images/ana-clara-avatar.jpg" alt="Foto de Ana Clara" class="testimonial-avatar">
+                        <p>"Finalmente um app que entende a rotina de um universitário atleta! Consigo conciliar tudo e ver meu progresso."</p>
+                        <h4>Ana Clara, Direito - UFMG</h4>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <img src="assets/images/lucas-p-avatar.jpg" alt="Foto de Lucas P." class="testimonial-avatar">
+                        <p>"Os relatórios visuais são um game changer. Nunca tive tanta clareza sobre minha evolução na corrida e na musculação."</p>
+                        <h4>Lucas P., Engenharia - USP</h4>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <img src="assets/images/mariana-s-avatar.jpg" alt="Foto de Mariana S." class="testimonial-avatar">
+                        <p>"A integração com o Strava e os desafios me mantêm motivado. Sem contar a comunidade, que é demais!"</p>
+                        <h4>Mariana S., Educação Física - UFRJ</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-propositions">
+            <div class="container">
+                <h2 class="reveal">Por que escolher Flow Fitness?</h2>
+                <div class="value-grid">
+                    <div class="value-item reveal">
+                        <img src="assets/images/value-results.jpg" alt="Gráfico de Resultados" class="value-icon">
+                        <h3>Resultados Comprovados</h3>
+                        <p>Alcance seus objetivos mais rápido com planos inteligentes e acompanhamento preciso.</p>
+                    </div>
+                    <div class="value-item reveal">
+                        <img src="assets/images/value-flexibility.jpg" alt="Ícone de Flexibilidade" class="value-icon">
+                        <h3>Flexibilidade Total</h3>
+                        <p>Adapte seus treinos à sua agenda universitária, com a liberdade que você precisa.</p>
+                    </div>
+                    <div class="value-item reveal">
+                        <img src="assets/images/value-support.jpg" alt="Ícone de Suporte" class="value-icon">
+                        <h3>Comunidade Ativa</h3>
+                        <p>Conecte-se, motive-se e supere desafios com uma rede de atletas como você.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Sobre Nós</a>
+                <a href="#">Suporte</a>
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+            </div>
+            <div class="footer-social">
+                </div>
+            <p>&copy; 2025 Flow Fitness. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
